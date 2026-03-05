@@ -26,10 +26,12 @@ class Ticket extends Model
      */
     protected $fillable = [
         'user_id',
+        'assigned_to',  // Ditambah untuk RBAC (Minggu 4 Hari 2)
         'title',
         'description',
         'status',
         'priority',
+        'category',
     ];
 
     /**
@@ -55,16 +57,25 @@ class Ticket extends Model
     ];
 
     /**
-     * Relasi: Ticket belongs to User
+     * Relasi: Ticket belongs to User (owner/creator)
      *
      * Setiap tiket dimiliki oleh satu user
      * Penggunaan: $ticket->user->name
-     *
-     * @return BelongsTo
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    /**
+     * Relasi: Ticket assigned to User (staff)
+     * Ditambah untuk RBAC (Minggu 4 Hari 2)
+     *
+     * Penggunaan: $ticket->assignee->name
+     */
+    public function assignee(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'assigned_to');
     }
 
     /**
@@ -88,32 +99,71 @@ class Ticket extends Model
     }
 
     /**
+     * Scope: Only open tickets
+     */
+    public function scopeOpen($query)
+    {
+        return $query->whereIn('status', ['open', 'in_progress']);
+    }
+
+    /**
      * Accessor untuk mendapatkan badge class berdasarkan status
      *
      * Penggunaan: $ticket->status_badge
      */
     public function getStatusBadgeAttribute(): string
     {
-        return match($this->status) {
+        return match ($this->status) {
             'open' => 'bg-warning',
             'in_progress' => 'bg-info',
-            'closed' => 'bg-success',
+            'resolved' => 'bg-success',
+            'closed' => 'bg-secondary',
             default => 'bg-secondary',
         };
     }
 
     /**
-     * Accessor untuk mendapatkan badge class berdasarkan prioritas
+     * Accessor untuk mendapatkan badge class berdasarkan priority
      *
      * Penggunaan: $ticket->priority_badge
      */
     public function getPriorityBadgeAttribute(): string
     {
-        return match($this->priority) {
-            'low' => 'bg-secondary',
-            'medium' => 'bg-primary',
+        return match ($this->priority) {
             'high' => 'bg-danger',
+            'medium' => 'bg-warning',
+            'low' => 'bg-success',
             default => 'bg-secondary',
         };
+    }
+
+    /**
+     * Check if ticket is open for editing
+     * Ticket yang sudah closed tidak bisa diedit oleh regular user
+     */
+    public function isEditable(): bool
+    {
+        return $this->status !== 'closed';
+    }
+
+    /**
+     * Check if ticket belongs to given user
+     */
+    public function belongsToUser(User $user): bool
+    {
+        return $this->user_id === $user->id;
+    }
+
+    /**
+     * Check if ticket is assigned to given user
+     */
+    public function isAssignedTo(User $user): bool
+    {
+        return $this->assigned_to === $user->id;
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

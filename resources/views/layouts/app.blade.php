@@ -30,8 +30,8 @@
             --topbar-height: 56px;
             --primary-color: #0d6efd;
             --sidebar-bg: #0d6efd;
-            --sidebar-hover: rgba(255, 255, 255, 0.15);
-            --sidebar-active: rgba(255, 255, 255, 0.25);
+            --sidebar-hover: rgba(255,255,255,0.15);
+            --sidebar-active: rgba(255,255,255,0.25);
         }
 
         * {
@@ -62,7 +62,7 @@
             transition: transform 0.3s ease, width 0.3s ease;
             display: flex;
             flex-direction: column;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         }
 
         .sidebar.collapsed {
@@ -74,12 +74,10 @@
             transform: translateX(-100%);
             transition: none;
         }
-
         html.sidebar-collapsed-on-load .main-wrapper {
             margin-left: 0;
             transition: none;
         }
-
         /* Re-enable transitions after page load */
         html.sidebar-ready .sidebar,
         html.sidebar-ready .main-wrapper {
@@ -88,7 +86,7 @@
 
         .sidebar-header {
             padding: 1rem 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -106,13 +104,13 @@
         }
 
         .sidebar-header .logo:hover {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255,255,255,0.9);
         }
 
         .sidebar-close {
             background: none;
             border: none;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255,255,255,0.7);
             font-size: 1.25rem;
             cursor: pointer;
             padding: 0.25rem;
@@ -139,12 +137,12 @@
         }
 
         .sidebar-body::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255,255,255,0.3);
             border-radius: 3px;
         }
 
         .sidebar-body::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255,255,255,0.4);
         }
 
         /* Navigation Menu */
@@ -159,7 +157,7 @@
             font-size: 0.65rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255,255,255,0.5);
             font-weight: 600;
         }
 
@@ -171,7 +169,7 @@
             display: flex;
             align-items: center;
             padding: 0.5rem 0.75rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
             border-radius: 0.375rem;
             transition: all 0.2s ease;
@@ -224,7 +222,7 @@
         .nav-collapse .nav-link {
             padding-left: 2.25rem;
             font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255,255,255,0.8);
         }
 
         .nav-collapse .nav-link:hover {
@@ -232,48 +230,21 @@
         }
 
         /* Color variants for nav links */
-        .nav-link.text-danger {
-            color: #ffb3b3 !important;
-        }
-
-        .nav-link.text-danger:hover {
-            background: rgba(255, 179, 179, 0.2);
-            color: #fff !important;
-        }
-
-        .nav-link.text-success {
-            color: #90EE90 !important;
-        }
-
-        .nav-link.text-success:hover {
-            background: rgba(144, 238, 144, 0.2);
-            color: #fff !important;
-        }
-
-        .nav-link.text-warning {
-            color: #ffe066 !important;
-        }
-
-        .nav-link.text-warning:hover {
-            background: rgba(255, 224, 102, 0.2);
-            color: #fff !important;
-        }
-
-        .nav-link.text-info {
-            color: #87CEEB !important;
-        }
-
-        .nav-link.text-info:hover {
-            background: rgba(135, 206, 235, 0.2);
-            color: #fff !important;
-        }
+        .nav-link.text-danger { color: #ffb3b3 !important; }
+        .nav-link.text-danger:hover { background: rgba(255,179,179,0.2); color: #fff !important; }
+        .nav-link.text-success { color: #90EE90 !important; }
+        .nav-link.text-success:hover { background: rgba(144,238,144,0.2); color: #fff !important; }
+        .nav-link.text-warning { color: #ffe066 !important; }
+        .nav-link.text-warning:hover { background: rgba(255,224,102,0.2); color: #fff !important; }
+        .nav-link.text-info { color: #87CEEB !important; }
+        .nav-link.text-info:hover { background: rgba(135,206,235,0.2); color: #fff !important; }
 
         /* Sidebar Footer */
         .sidebar-footer {
             padding: 0.75rem 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(255,255,255,0.2);
             font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255,255,255,0.6);
             text-align: center;
         }
 
@@ -367,7 +338,7 @@
         .sidebar-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0,0,0,0.5);
             z-index: 999;
             display: none;
             opacity: 0;
@@ -421,7 +392,7 @@
         .card-header {
             font-weight: 600;
             background: #fff;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         pre code {
@@ -439,20 +410,13 @@
             color: white;
         }
 
-        .badge-vulnerable {
-            background-color: #dc3545;
-        }
+        .badge-vulnerable { background-color: #dc3545; }
+        .badge-secure { background-color: #198754; }
 
-        .badge-secure {
-            background-color: #198754;
-        }
-
-        .text-success-emphasis {
-            color: #0a3622 !important;
-        }
+        .text-success-emphasis { color: #0a3622 !important; }
 
         .table code {
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: rgba(0,0,0,0.05);
             padding: 0.125rem 0.25rem;
             border-radius: 0.25rem;
             font-size: 0.85em;
@@ -471,15 +435,8 @@
         }
 
         @keyframes pulse-border {
-
-            0%,
-            100% {
-                border-left-color: #dc3545;
-            }
-
-            50% {
-                border-left-color: #ff6b6b;
-            }
+            0%, 100% { border-left-color: #dc3545; }
+            50% { border-left-color: #ff6b6b; }
         }
     </style>
 
@@ -515,8 +472,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('tickets.index') }}"
-                        class="nav-link {{ request()->routeIs('tickets.*') ? 'active' : '' }}">
+                    <a href="{{ route('tickets.index') }}" class="nav-link {{ request()->routeIs('tickets.*') ? 'active' : '' }}">
                         <i class="bi bi-ticket-detailed"></i> Tickets
                     </a>
                 </li>
@@ -527,12 +483,10 @@
                 {{-- Demo Blade --}}
                 <li class="nav-item">
                     <a href="#demoBlade" class="nav-link {{ request()->routeIs('demo-blade.*') ? '' : 'collapsed' }}"
-                        data-bs-toggle="collapse"
-                        aria-expanded="{{ request()->routeIs('demo-blade.*') ? 'true' : 'false' }}">
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('demo-blade.*') ? 'true' : 'false' }}">
                         <i class="bi bi-code-slash"></i> Demo Blade
                     </a>
-                    <ul class="collapse nav-collapse {{ request()->routeIs('demo-blade.*') ? 'show' : '' }}"
-                        id="demoBlade">
+                    <ul class="collapse nav-collapse {{ request()->routeIs('demo-blade.*') ? 'show' : '' }}" id="demoBlade">
                         <li class="nav-item">
                             <a href="{{ route('demo-blade.index') }}" class="nav-link">
                                 <i class="bi bi-house"></i> Overview
@@ -567,12 +521,10 @@
                 {{-- XSS Lab --}}
                 <li class="nav-item">
                     <a href="#xssLab" class="nav-link {{ request()->routeIs('xss-lab.*') ? '' : 'collapsed' }}"
-                        data-bs-toggle="collapse"
-                        aria-expanded="{{ request()->routeIs('xss-lab.*') ? 'true' : 'false' }}">
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('xss-lab.*') ? 'true' : 'false' }}">
                         <i class="bi bi-shield-exclamation"></i> XSS Lab
                     </a>
-                    <ul class="collapse nav-collapse {{ request()->routeIs('xss-lab.*') ? 'show' : '' }}"
-                        id="xssLab">
+                    <ul class="collapse nav-collapse {{ request()->routeIs('xss-lab.*') ? 'show' : '' }}" id="xssLab">
                         <li class="nav-item">
                             <a href="{{ route('xss-lab.index') }}" class="nav-link">
                                 <i class="bi bi-house"></i> Overview
@@ -613,14 +565,11 @@
 
                 {{-- Validation Lab --}}
                 <li class="nav-item">
-                    <a href="#validationLab"
-                        class="nav-link {{ request()->routeIs('validation-lab.*') ? '' : 'collapsed' }}"
-                        data-bs-toggle="collapse"
-                        aria-expanded="{{ request()->routeIs('validation-lab.*') ? 'true' : 'false' }}">
+                    <a href="#validationLab" class="nav-link {{ request()->routeIs('validation-lab.*') ? '' : 'collapsed' }}"
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('validation-lab.*') ? 'true' : 'false' }}">
                         <i class="bi bi-check-circle"></i> Input Validation
                     </a>
-                    <ul class="collapse nav-collapse {{ request()->routeIs('validation-lab.*') ? 'show' : '' }}"
-                        id="validationLab">
+                    <ul class="collapse nav-collapse {{ request()->routeIs('validation-lab.*') ? 'show' : '' }}" id="validationLab">
                         <li class="nav-item">
                             <a href="{{ route('validation-lab.index') }}" class="nav-link">
                                 <i class="bi bi-house"></i> Overview
@@ -642,12 +591,10 @@
                 {{-- CSRF Lab --}}
                 <li class="nav-item">
                     <a href="#csrfLab" class="nav-link {{ request()->routeIs('csrf-lab.*') ? '' : 'collapsed' }}"
-                        data-bs-toggle="collapse"
-                        aria-expanded="{{ request()->routeIs('csrf-lab.*') ? 'true' : 'false' }}">
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('csrf-lab.*') ? 'true' : 'false' }}">
                         <i class="bi bi-key"></i> CSRF Lab
                     </a>
-                    <ul class="collapse nav-collapse {{ request()->routeIs('csrf-lab.*') ? 'show' : '' }}"
-                        id="csrfLab">
+                    <ul class="collapse nav-collapse {{ request()->routeIs('csrf-lab.*') ? 'show' : '' }}" id="csrfLab">
                         <li class="nav-item">
                             <a href="{{ route('csrf-lab.index') }}" class="nav-link">
                                 <i class="bi bi-house"></i> Overview
@@ -679,12 +626,10 @@
                 {{-- SQLi Lab --}}
                 <li class="nav-item">
                     <a href="#sqliLab" class="nav-link {{ request()->routeIs('sqli-lab.*') ? '' : 'collapsed' }}"
-                        data-bs-toggle="collapse"
-                        aria-expanded="{{ request()->routeIs('sqli-lab.*') ? 'true' : 'false' }}">
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('sqli-lab.*') ? 'true' : 'false' }}">
                         <i class="bi bi-database-exclamation"></i> SQLi Lab
                     </a>
-                    <ul class="collapse nav-collapse {{ request()->routeIs('sqli-lab.*') ? 'show' : '' }}"
-                        id="sqliLab">
+                    <ul class="collapse nav-collapse {{ request()->routeIs('sqli-lab.*') ? 'show' : '' }}" id="sqliLab">
                         <li class="nav-item">
                             <a href="{{ route('sqli-lab.index') }}" class="nav-link">
                                 <i class="bi bi-house"></i> Overview
@@ -718,19 +663,128 @@
                     </ul>
                 </li>
 
+                {{-- Auth Lab --}}
+                <li class="nav-item">
+                    <a href="#authLab" class="nav-link {{ request()->routeIs('auth-lab.*') || request()->routeIs('login') || request()->routeIs('register') || request()->routeIs('vulnerable.*') ? '' : 'collapsed' }}"
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('auth-lab.*') || request()->routeIs('login') || request()->routeIs('register') || request()->routeIs('vulnerable.*') ? 'true' : 'false' }}">
+                        <i class="bi bi-shield-lock"></i> Auth Lab
+                    </a>
+                    <ul class="collapse nav-collapse {{ request()->routeIs('auth-lab.*') || request()->routeIs('login') || request()->routeIs('register') || request()->routeIs('vulnerable.*') ? 'show' : '' }}" id="authLab">
+                        <li class="nav-item">
+                            <a href="{{ route('auth-lab.index') }}" class="nav-link">
+                                <i class="bi bi-house"></i> Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('auth-lab.comparison') }}" class="nav-link text-info">
+                                <i class="bi bi-arrows-angle-expand"></i> Comparison
+                            </a>
+                        </li>
+                        {{-- Secure Auth --}}
+                        <li class="nav-item">
+                            <a href="{{ route('login') }}" class="nav-link text-success">
+                                <i class="bi bi-box-arrow-in-right"></i> Login (Secure)
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('register') }}" class="nav-link text-success">
+                                <i class="bi bi-person-plus"></i> Register (Secure)
+                            </a>
+                        </li>
+                        {{-- Vulnerable Auth --}}
+                        <li class="nav-item">
+                            <a href="{{ route('vulnerable.login') }}" class="nav-link text-danger">
+                                <i class="bi bi-unlock"></i> Login (Vulnerable)
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('vulnerable.register') }}" class="nav-link text-danger">
+                                <i class="bi bi-person-plus-fill"></i> Register (Vulnerable)
+                            </a>
+                        </li>
+                        {{-- Demo/Debug --}}
+                        <li class="nav-item">
+                            <a href="{{ route('vulnerable.show-users') }}" class="nav-link text-warning">
+                                <i class="bi bi-database"></i> Show DB Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('vulnerable.brute-force-stats') }}" class="nav-link text-warning">
+                                <i class="bi bi-graph-up"></i> Brute Force Stats
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{-- Authorization (RBAC) - Minggu 4 Hari 2 --}}
+                <li class="nav-item">
+                    <a href="#authorizationLab" class="nav-link {{ request()->routeIs('authorization-lab.*') || request()->routeIs('admin.*') || request()->routeIs('dashboard') ? '' : 'collapsed' }}"
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('authorization-lab.*') || request()->routeIs('admin.*') || request()->routeIs('dashboard') ? 'true' : 'false' }}">
+                        <i class="bi bi-person-badge"></i> Authorization
+                    </a>
+                    <ul class="collapse nav-collapse {{ request()->routeIs('authorization-lab.*') || request()->routeIs('admin.*') || request()->routeIs('dashboard') ? 'show' : '' }}" id="authorizationLab">
+                        {{-- Lab Pages --}}
+                        <li class="nav-item">
+                            <a href="{{ route('authorization-lab.index') }}" class="nav-link {{ request()->routeIs('authorization-lab.index') ? 'active' : '' }}">
+                                <i class="bi bi-house"></i> Lab Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('authorization-lab.login') }}" class="nav-link {{ request()->routeIs('authorization-lab.login') ? 'active' : '' }}">
+                                <i class="bi bi-box-arrow-in-right"></i> Test Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('authorization-lab.implementation') }}" class="nav-link {{ request()->routeIs('authorization-lab.implementation') ? 'active' : '' }}">
+                                <i class="bi bi-code-slash"></i> Implementation
+                            </a>
+                        </li>
+                        <hr class="my-1 mx-3">
+                        @auth
+                            <li class="nav-item">
+                                <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                                    <i class="bi bi-speedometer2"></i> Dashboard
+                                </a>
+                            </li>
+                            @can('access-admin')
+                            <li class="nav-item">
+                                <a href="{{ route('admin.dashboard') }}" class="nav-link text-danger {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                                    <i class="bi bi-gear"></i> Admin Panel
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.users') }}" class="nav-link text-danger {{ request()->routeIs('admin.users') ? 'active' : '' }}">
+                                    <i class="bi bi-people"></i> Manage Users
+                                </a>
+                            </li>
+                            @endcan
+                            @can('view-reports')
+                            <li class="nav-item">
+                                <a href="{{ route('admin.reports') }}" class="nav-link text-info {{ request()->routeIs('admin.reports') ? 'active' : '' }}">
+                                    <i class="bi bi-graph-up-arrow"></i> Reports
+                                </a>
+                            </li>
+                            @endcan
+                        @else
+                            <li class="nav-item">
+                                <a href="{{ route('authorization-lab.login') }}" class="nav-link text-muted">
+                                    <i class="bi bi-lock"></i> Login untuk Demo
+                                </a>
+                            </li>
+                        @endauth
+                    </ul>
+                </li>
+
                 {{-- TOOLS --}}
                 <li class="nav-section">Tools</li>
 
                 {{-- Security Testing --}}
                 <li class="nav-item">
-                    <a href="#securityTesting"
-                        class="nav-link {{ request()->routeIs('security-testing.*') ? '' : 'collapsed' }}"
-                        data-bs-toggle="collapse"
-                        aria-expanded="{{ request()->routeIs('security-testing.*') ? 'true' : 'false' }}">
+                    <a href="#securityTesting" class="nav-link {{ request()->routeIs('security-testing.*') ? '' : 'collapsed' }}"
+                       data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('security-testing.*') ? 'true' : 'false' }}">
                         <i class="bi bi-shield-shaded"></i> Security Testing
                     </a>
-                    <ul class="collapse nav-collapse {{ request()->routeIs('security-testing.*') ? 'show' : '' }}"
-                        id="securityTesting">
+                    <ul class="collapse nav-collapse {{ request()->routeIs('security-testing.*') ? 'show' : '' }}" id="securityTesting">
                         <li class="nav-item">
                             <a href="{{ route('security-testing.index') }}" class="nav-link">
                                 <i class="bi bi-house"></i> Dashboard
@@ -799,29 +853,70 @@
             </div>
             <div class="topbar-right">
                 {{-- SQLi Lab Quick Actions --}}
-                @if (request()->routeIs('sqli-lab.*'))
-                    <a href="{{ route('sqli-lab.seed') }}" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-plus-circle"></i> Seed
-                    </a>
-                    <a href="{{ route('sqli-lab.reset') }}" class="btn btn-sm btn-outline-secondary">
-                        <i class="bi bi-arrow-counterclockwise"></i> Reset
-                    </a>
+                @if(request()->routeIs('sqli-lab.*'))
+                <a href="{{ route('sqli-lab.seed') }}" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-plus-circle"></i> Seed
+                </a>
+                <a href="{{ route('sqli-lab.reset') }}" class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-arrow-counterclockwise"></i> Reset
+                </a>
                 @endif
 
-                {{-- User Dropdown --}}
-                <div class="dropdown">
-                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
-                        data-bs-toggle="dropdown">
-                        <i class="bi bi-person-circle"></i> User Demo
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
-                        </li>
-                    </ul>
+                {{-- User Status & Actions --}}
+                <div class="d-flex align-items-center gap-2">
+                    @auth
+                        {{-- Secure Auth User --}}
+                        <a href="{{ route('dashboard') }}" class="btn btn-sm btn-success" title="Dashboard">
+                            <i class="bi bi-speedometer2"></i>
+                        </a>
+                        <span class="badge bg-success">
+                            <i class="bi bi-person-check"></i> {{ Auth::user()->name }}
+                        </span>
+                        <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-outline-success" title="Logout (Secure)">
+                                <i class="bi bi-box-arrow-right"></i>
+                            </button>
+                        </form>
+                    @endauth
+
+                    @if(session('vulnerable_user'))
+                        {{-- Vulnerable Auth User --}}
+                        <a href="{{ route('vulnerable.dashboard') }}" class="btn btn-sm btn-danger" title="Dashboard (Vulnerable)">
+                            <i class="bi bi-speedometer2"></i>
+                        </a>
+                        <span class="badge bg-danger">
+                            <i class="bi bi-exclamation-triangle"></i>
+                            {{ session('vulnerable_user')->name ?? 'Vulnerable User' }}
+                        </span>
+                        <form method="POST" action="{{ route('vulnerable.logout') }}" class="d-inline">
+                            @csrf
+                            <a href="{{ route('vulnerable.logout') }}" class="btn btn-sm btn-outline-danger" title="Logout (Vulnerable)"
+                               onclick="event.preventDefault(); this.closest('form').submit();">
+                                <i class="bi bi-box-arrow-right"></i>
+                            </a>
+                        </form>
+                    @endif
+
+                    @guest
+                        @if(!session('vulnerable_user'))
+                            {{-- Not logged in --}}
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person-circle"></i> Guest
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><h6 class="dropdown-header"><i class="bi bi-shield-check"></i> Secure Auth</h6></li>
+                                    <li><a class="dropdown-item" href="{{ route('login') }}"><i class="bi bi-box-arrow-in-right text-success"></i> Login</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('register') }}"><i class="bi bi-person-plus text-success"></i> Register</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header"><i class="bi bi-exclamation-triangle"></i> Vulnerable Auth</h6></li>
+                                    <li><a class="dropdown-item" href="{{ route('vulnerable.login') }}"><i class="bi bi-unlock text-danger"></i> Login</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('vulnerable.register') }}"><i class="bi bi-person-plus-fill text-danger"></i> Register</a></li>
+                                </ul>
+                            </div>
+                        @endif
+                    @endguest
                 </div>
             </div>
         </header>
@@ -846,6 +941,13 @@
             @if (session('danger'))
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <i class="bi bi-exclamation-triangle"></i> {{ session('danger') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            @endif
+
+            @if (session('info'))
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <i class="bi bi-info-circle"></i> {{ session('info') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
             @endif

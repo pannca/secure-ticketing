@@ -11,7 +11,7 @@ use Illuminate\View\View;
 
 /**
  * Login Controller - SECURE IMPLEMENTATION
- * 
+ *
  * Controller ini mengimplementasikan best practices:
  * 1. Rate limiting via LoginRequest
  * 2. Session regeneration setelah login
@@ -32,7 +32,7 @@ class LoginController extends Controller
 
     /**
      * Handle an incoming authentication request.
-     * 
+     *
      * SECURITY FEATURES:
      * 1. LoginRequest handles validation + rate limiting
      * 2. Session regeneration mencegah session fixation
@@ -51,7 +51,7 @@ class LoginController extends Controller
 
     /**
      * Destroy an authenticated session.
-     * 
+     *
      * SECURITY FEATURES:
      * 1. Session invalidation
      * 2. Token regeneration

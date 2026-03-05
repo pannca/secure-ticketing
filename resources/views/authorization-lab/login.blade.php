@@ -1,5 +1,5 @@
 {{--
-    Login View untuk Minggu 4 Hari 2: Authorization
+    Login View untuk Minggu 4 Hari 2: Authorization Lab
 
     INTEGRASI MATERI:
     - Minggu 2: Blade templating dengan @extends, @section
@@ -110,13 +110,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table-danger">
                             <td><code>admin@wikrama.sch.id</code></td>
                             <td><code>password</code></td>
                             <td><span class="badge bg-danger">admin</span></td>
                             <td><small>Full access + admin panel</small></td>
                         </tr>
-                        <tr>
+                        <tr class="table-primary">
                             <td><code>staff@wikrama.sch.id</code></td>
                             <td><code>password</code></td>
                             <td><span class="badge bg-primary">staff</span></td>
@@ -143,37 +143,87 @@
             </div>
         </div>
 
+        {{-- Quick Fill Buttons --}}
+        <div class="card mt-3">
+            <div class="card-header bg-secondary text-white">
+                <i class="bi bi-lightning"></i> Quick Fill (Klik untuk auto-fill)
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-outline-danger btn-sm quick-fill"
+                            data-email="admin@wikrama.sch.id" data-password="password">
+                        <i class="bi bi-person-gear"></i> Admin
+                    </button>
+                    <button type="button" class="btn btn-outline-primary btn-sm quick-fill"
+                            data-email="staff@wikrama.sch.id" data-password="password">
+                        <i class="bi bi-person-badge"></i> Staff
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm quick-fill"
+                            data-email="budi@student.wikrama.sch.id" data-password="password">
+                        <i class="bi bi-person"></i> User (Budi)
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm quick-fill"
+                            data-email="siti@student.wikrama.sch.id" data-password="password">
+                        <i class="bi bi-person"></i> User (Siti)
+                    </button>
+                </div>
+            </div>
+        </div>
+
         {{-- Authorization Code Preview --}}
         <div class="card mt-4">
             <div class="card-header bg-dark text-white">
                 <small><i class="bi bi-code-slash"></i> Authorization Code Preview</small>
             </div>
             <div class="card-body p-0">
-                <pre class="bg-dark text-light p-3 mb-0 small"><code>{{-- TicketPolicy.php - Authorization Check --}}
+                <pre class="bg-dark text-light p-3 mb-0 small"><code><span class="text-info">// TicketPolicy.php - Authorization Check</span>
 public function update(User $user, Ticket $ticket): bool
 {
     <span class="text-success">// Admin bisa update semua</span>
-    if ($user->isAdmin()) {
+    if ($user-&gt;isAdmin()) {
         return true;
     }
 
     <span class="text-success">// Staff bisa update yang assigned ke mereka</span>
-    if ($user->isStaff()) {
-        return $ticket->assigned_to === $user->id;
+    if ($user-&gt;isStaff()) {
+        return $ticket-&gt;assigned_to === $user-&gt;id;
     }
 
     <span class="text-success">// User hanya bisa update milik sendiri</span>
-    return $ticket->belongsToUser($user) &&
-           $ticket->isEditable();
+    return $ticket-&gt;belongsToUser($user) &amp;&amp;
+           $ticket-&gt;isEditable();
 }
 
-{{-- Blade: Conditional dengan @can --}}
+<span class="text-info">// Blade: Conditional dengan @@can</span>
 @@can('update', $ticket)
     &lt;a href="..."&gt;Edit&lt;/a&gt;
 @@endcan</code></pre>
             </div>
         </div>
 
+        {{-- Back to Lab Index --}}
+        <div class="text-center mt-4">
+            <a href="{{ route('authorization-lab.index') }}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Kembali ke Authorization Lab
+            </a>
+        </div>
+
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    // Quick fill functionality
+    document.querySelectorAll('.quick-fill').forEach(button => {
+        button.addEventListener('click', function() {
+            document.getElementById('email').value = this.dataset.email;
+            document.getElementById('password').value = this.dataset.password;
+
+            // Visual feedback
+            this.classList.add('active');
+            setTimeout(() => this.classList.remove('active'), 200);
+        });
+    });
+</script>
+@endpush

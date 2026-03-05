@@ -30,10 +30,8 @@ class StoreTicketRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        // Untuk sekarang, semua user bisa buat tiket
-        // Nanti di Minggu 4, bisa dicek:
-        // return $this->user() !== null;
-        return true;
+        // User harus authenticated untuk membuat ticket
+        return $this->user() !== null;
     }
 
     /**
