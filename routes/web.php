@@ -1,6 +1,5 @@
 <?php
 
-// Controllers
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CsrfLabController;
 use App\Http\Controllers\DemoBladeController;
@@ -535,6 +534,13 @@ Route::middleware('auth')->prefix('bac-lab')->name('bac-lab.')->group(function (
     });
 });
 
+// ============================================================================
+// Error Handling Demo (Minggu 5 Hari 2 - Error Handling & Information Disclosure)
+// ============================================================================
+
+Route::get('/error-handling-demo', function () {
+    return view('error-handling-demo.index');
+})->name('error-handling-demo');
 
 // ============================================================================
 // Secure Auth Routes (Laravel Breeze)
