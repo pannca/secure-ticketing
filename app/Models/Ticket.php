@@ -117,7 +117,6 @@ class Ticket extends Model
             'open' => 'bg-warning',
             'in_progress' => 'bg-info',
             'resolved' => 'bg-success',
-            'closed' => 'bg-secondary',
             default => 'bg-secondary',
         };
     }
@@ -132,7 +131,6 @@ class Ticket extends Model
         return match ($this->priority) {
             'high' => 'bg-danger',
             'medium' => 'bg-warning',
-            'low' => 'bg-success',
             default => 'bg-secondary',
         };
     }

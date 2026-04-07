@@ -7,14 +7,18 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
+        "laravel/telescope": "^5.19",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
+        "enlightn/enlightn": "^2.10",
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^2.9",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
+        "phpstan/phpstan": "^1.12",
         "phpunit/phpunit": "^10.5",
         "spatie/laravel-ignition": "^2.4"
     },

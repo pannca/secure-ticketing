@@ -120,7 +120,7 @@ class VulnerableLoginController extends Controller
     /**
      * Vulnerable dashboard
      */
-    public function dashboard(Request $request): View
+    public function dashboard(Request $request): View|RedirectResponse
     {
         $user = $request->session()->get('vulnerable_user');
 

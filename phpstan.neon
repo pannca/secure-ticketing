@@ -1,0 +1,12 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app/
+        - tests/
+    level: 5
+    ignoreErrors:
+        - '#PHPDoc type array<int, string>.*is not covariant with PHPDoc type list<string>#'
+        - '#Call to method.*assertTrue\(\) with true will always evaluate to true#'
+        - '#view expects view-string\|null, string given#'

@@ -76,7 +76,7 @@ class LoginController extends Controller
     public function status(Request $request): View
     {
         $loginAttempts = \App\Models\LoginAttempt::secure()
-            ->where('email', Auth::user()?->email ?? $request->input('email', ''))
+            ->where('email', Auth::user()->email ?? $request->input('email', ''))
             ->latest()
             ->take(10)
             ->get();
